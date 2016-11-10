@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="author" 		content="Marek Philibert"/>
+		<meta name="copyright" 		content="Copyright © 2016 Marek Philibert"/>
+		<meta name="date"			content="March 20, 2016"/>
+		<meta name="description" 	content="Marek Philibert's Curriculum Vitae"/>
+		<meta name="keywords" 		content="Curriculum Vitae, CV, Resume, Montreal, Software Developer, Database, C#, C++, Java, PHP, SQL, HTML, CSS, JavaScript, jQuery, MVC, Laravel"/>
+		<meta name="language" 		content="English"/>
+		<meta name="reply-to" 		content="marekphilibert@gmail.com"/>
+		<meta name="robots" 		content="noarchive"/>
+		<meta name="url" 			content="http://smarekp.github.io/cv"/>
+		<meta name="viewport" 		content="width=device-width"/>
+		<title>Marek Philibert | CV 2016-03-20</title>
+		<!-- Embedded CSS so that the document works offline. -->
+		<style type="text/css">
+			/*******************************************/
+			/********** ORGANIZATIONAL STYLES **********/
+			/*******************************************/
+			* {
+				box-sizing: border-box;
+			}
+			
+			body {
+				margin: 0;
+				padding: 0;
+				background: #D3D3D3; /*lightgrey*/
+			}
+
+			#wrapper {
+				min-width: 652pt; /*Width of letter paper + 40pt.*/
+				min-height: 832pt; /*Height of letter paper + 40pt.*/
+			}
+
+			#wrapper.flex {
+				display: flex;
+				flex-wrap: nowrap;
+				justify-content: center;
+				align-items: center;
+			}
+
+			header {
+				display: block;
+				margin-bottom: 1em;
+			}
+
+			header.flex {
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+			}
+
+			header > address {
+				display: block;
+				font-size: small;
+				font-style: normal;
+			}
+
+			main {
+				display: block;
+			}
+
+			footer {
+				display: block;
+				position: relative;
+				padding: 0;
+				margin: 0;
+				bottom: 0;
+				right: 0;
+				text-align: right;
+				font-style: italic;
+				color: #696969; /* dimgray */
+			}
+
+			h1, h2, h3 {
+				margin: 0;
+			}
+
+			hr {
+				margin: 1em 0 1em 0;
+			}
+
+			a {
+				text-decoration: none;
+				border-bottom: 1px dotted;
+				border-color: blue;
+				color: blue;
+			}
+			a:visited {
+				border-bottom: 1px dotted;
+				border-color: purple;
+				color: purple;
+			}
+			a:hover {
+				border-bottom: 1px solid;
+			}
+			a:active {
+				border-bottom: 1px solid;
+				border-color: red;
+				color: red;
+			}
+
+			time {
+				display: inline;
+			}
+
+			del {
+				display: none;
+				text-decoration: none;
+			}
+
+			/***************************************/
+			/********** LETTER PAGE STYLE **********/
+			/***************************************/
+			.page-letter {
+				min-width: 612pt; /*Width of letter paper in points.*/
+				max-width: 612pt;
+				width: 612pt; 
+				min-height: 792pt; /*Height of letter paper in points.*/
+				max-height: 792pt;
+				height: 792pt; 
+				padding: 29pt;
+				margin: 15pt;
+				font-family: "Trebuchet MS", Helvetica, Ariel, Tahoma, sans-serif;
+				position: relative;
+				background: #FFFEFE; /*Slightly red color encourages impulse-hire?*/
+				border: 1px solid black;
+			}
+
+			.no-overflow {
+				overflow-y: hidden;
+				max-height: 100%;
+				max-width: 100%;
+			}
+
+			/* Shadow Effect inspired by: Paul Underwood -- Posted: 08/04/2015 */
+			/* http://www.paulund.co.uk/creating-different-css3-box-shadows-effects */
+			.shadow {
+				position: relative;
+				overflow-y: visible; /* "hidden" breaks the shadow effect. */
+			}
+
+			.shadow:before, .shadow:after {
+				z-index: -1;
+				position: absolute;
+				content: "";
+				bottom: 15px;
+				left: 10px;
+				width: 50%;
+				top: 80%;
+				max-width: 100%;
+				background: #777;
+				box-shadow: 0 15px 10px #777;
+				-webkit-box-shadow: 0 15px 10px #777;
+				-moz-box-shadow: 0 15px 10px #777;
+				transform: rotate(-3deg);
+				-webkit-transform: rotate(-3deg);
+				-moz-transform: rotate(-3deg);
+				-o-transform: rotate(-3deg);
+				-ms-transform: rotate(-3deg);
+			}
+			
+			.shadow:after {
+				right: 10px;
+				left: auto;
+				transform: rotate(3deg);
+				-webkit-transform: rotate(3deg);
+				-moz-transform: rotate(3deg);
+				-o-transform: rotate(3deg);
+				-ms-transform: rotate(3deg);
+			}
+
+			/**************************************/
+			/**********  SECTION STYLES  **********/
+			/**************************************/
+			section {
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				margin: 1em 0;
+			}
+
+			section > h2 {
+				width: 130pt;
+				padding-right: 20pt;
+			}
+
+			.content-vertical > .entry {
+				margin-top: 1em;
+			}
+			
+			.content-vertical > .entry:first-child {
+				margin-top: 4pt;
+			}
+
+			.content-horizontal {
+				width: 400pt;
+			}
+
+			.content-horizontal > * {
+				display: inline-block;
+				text-align: top;
+				vertical-align: text-top;
+			}
+
+			.content-horizontal.flex {
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-between;
+				align-items: flex-start;
+			}
+
+			/***********************************/
+			/**********  LIST STYLES  **********/
+			/***********************************/
+			ul.entry {
+				margin-bottom: 0;
+			}
+
+			ul.no-margin {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+
+			ul.no-bullets {
+				list-style: none;
+				padding-left: 0;
+			}
+
+			ul.no-bullets > li {
+				margin-top: 4px;
+			}
+
+			ul.no-bullets > li:first-child {
+				margin-top: 0;
+			}
+
+			/************************************/
+			/**********  PRINT STYLES  **********/
+			/************************************/
+			@media print {
+				/* @page {size: auto; margin: 0mm;} */ /*Forces printer margins, but why remove user options?*/
+
+				body {
+					background: none;
+				}
+
+				#wrapper {
+					display: block;
+					min-width: 0;
+					min-height: 0;
+					padding: 0;
+				}
+
+				.page-letter {
+					background: none;
+					border: none;
+					margin: 0;
+				}
+
+				.shadow:before, .shadow:after {
+					display: none;
+				}
+
+				a, a:active, a:focus, a:hover, a:visited {
+					color: black;
+					outline: none;
+					text-decoration: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper" class="flex">
+			<div class="page-letter shadow">
+				<div class="no-overflow">
+					<header class="flex">
+						<h1>Marek Philibert</h1>
+						<!-- TODO social media icons that disappear when printing -->
+						<address>
+							<ul class="no-bullets no-margin">
+								<li><a href="mailto:marekphilibert@gmail.com" rel="email author" target="_blank">marekphilibert@gmail.com</a></li>
+								<li><a href="https://www.google.ca/maps/place/Montreal,+QC/" rel="locate author" target="_blank">Montreal, Quebec</a></li>
+							</ul>
+							<del datetime="2015-09-15"> <!-- DEL email communication is preferable -->
+								<a href="https://linkedin.com/in/marekphilibert" target="_blank">LinkedIn</a>
+							</del>
+						</address>
+					</header>
+					<main>
+						<hr/>
+						<section> <!-- Languages -->
+							<h2>Languages</h2>
+							<div class="content-vertical">
+								<div class="entry">English and French</div>
+							</div>
+						</section>
+						<hr/>
+						<section> <!-- Education -->
+							<h2>Education</h2>
+							<div class="content-vertical">
+								<div class="entry">
+									<h3>John Abbott College</h3>
+									<div class="date">2010 &ndash; 2014</div>
+									<div>DEC Computer Science Technology</div>
+									<small>Specialization in Administrative Data Processing</small>
+								</div>
+								<del datetime="2015-07-09"> <!-- DEL High School Diploma assumed since I have a DEC -->
+									<div class="entry">
+										<h3>École secondaire de la Cité-des-Jeunes</h3>
+										<div class="date">2002 &ndash; 2007</div>
+										<div>High School Diploma</div>
+									</div>
+								</del>
+							</div>
+						</section>
+						<hr/>
+						<section> <!-- Professional Experience -->
+							<!-- This section is not in chonological order. -->
+							<h2>Professional Experience</h2>
+							<div class="content-vertical">
+								<div class="entry"> <!-- Kunnect -->
+									<h3>Kunnect (RocknRolla Applications Inc.)</h3>
+									<div class="date">Aug 2015 &ndash; Dec 2015</div>
+									<div>Software Developer</div>
+									<ul class="no-margin">
+										<li>Developing web apps for clients, using PHP Laravel framework</li>
+										<li>Modernizing and standardizing existing command line PHP scripts</li>
+									</ul>
+								</div>
+								<div class="entry"> <!-- McGill University -->
+									<h3>McGill University, Department of Natural Resource Sciences</h3>
+									<div class="date">Jan 2014 &ndash; Aug 2014</div>
+									<div>Intern / Casual Research Assistant</div>
+									<ul class="no-margin">
+										<li>Creating PHP website to filter landscapes by classification metrics</li>
+										<li>Apache webserver and MySQL database administration</li>
+									</ul>
+								</div>
+								<div class="entry"> <!-- John Abbott College -->
+									<h3>John Abbott College, Computer Science Department</h3>
+									<div class="date">Sep 2012 &ndash; Dec 2013</div>
+									<div>Computer Lab Technician</div>
+									<ul class="no-margin">
+										<li>Troubleshooting, maintaining, and cleaning computer labs</li>
+										<li>Helping students and teachers use college computers and peripherals</li>
+									</ul>
+								</div>
+								<div class="entry"> <!-- Play-N-Trade -->
+									<h3>Play-N-Trade, Vaudreuil-Dorion</h3>
+									<div class="date">Jul 2013 &ndash; Feb 2014</div>
+									<div>Game Console Repair</div>
+									<ul class="no-margin">
+										<li>Diagnosing and repairing home and portable game console hardware</li>
+										<li>Performing scrap console tear-down for parts</li>
+									</ul>
+								</div>
+								<del datetime="2015-05-18"> <!-- DEL Irrelevant to Computer Science -->
+									<div class="entry"> <!-- Couche-Tard -->
+										<h3>Couche-Tard, Vaudreuil-Dorion</h3>
+										<div class="date">Jul 2012 &ndash; Nov 2012</div>
+										<div>Store Clerk</div>
+									</div>
+									<div class="entry"> <!-- Browns Shoes Warehouse -->
+										<h3>Browns Shoes Warehouse, Montreal</h3> <!-- 789 Bégin St, Montreal -->
+										<div class="date">Jul 2010 &ndash; Sep 2010</div>
+										<div>Warehousing and Receiving</div>
+									</div>
+								</del>
+							</div>
+						</section>
+						<hr/>
+						<section> <!-- Certifications -->
+							<h2>Certifications</h2>
+							<div class="content-vertical">
+								<ul class="entry no-bullets">
+									<li>MTA: Database Fundamentals</li>
+									<li>MTA: Software Development Fundamentals</li>
+									<li>MCPS: Microsoft Certified Professional</li>
+								</ul>
+							</div>
+						</section>
+						<hr/>
+						<section> <!-- Skills -->
+							<h2>Skills</h2>
+							<div class="content-horizontal flex">
+								<div class="entry">
+									<h3>Web Development</h3>
+									<ul class="no-margin">
+										<li>PHP</li>
+										<li>HTML</li>
+										<li>CSS</li>
+										<li>JQuery</li>
+										<li>SQL</li>
+									</ul>
+								</div>
+								<div class="entry">
+									<h3>Web Server</h3>
+									<ul class="no-margin">
+										<li>Apache</li>
+										<li>MySQL</li>
+										<li>phpMyAdmin</li>
+										<li>Linux</li>
+										<li>Bash Scripting</li>
+									</ul>
+								</div>
+								<div class="entry">
+									<h3>Miscellaneous</h3>
+									<ul class="no-margin">
+										<li>C#</li>
+										<li>C++</li>
+										<li>Java (Android)</li>
+										<li>Windows (XP, 7, 8)</li>
+										<li>Tutoring</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+					</main>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
