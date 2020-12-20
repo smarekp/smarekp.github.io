@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<meta name="author" 		content="Marek Philibert"/>
-		<meta name="copyright" 		content="Copyright © 2020 Marek Philibert"/>
+		<meta name="copyright"		content="Copyright © 2020 Marek Philibert"/>
 		<meta name="date"			content="December 19, 2020"/>
 		<meta name="description" 	content="Marek Philibert's Curriculum Vitae"/>
 		<meta name="keywords" 		content="Curriculum Vitae, CV, Resume, Montreal, Software Developer, Database, Apache, PHP, SQL, MySQL, HTML, SCSS, CSS, JavaScript, jQuery, NodeJS, MVC, Laravel"/>
@@ -84,21 +84,22 @@
 
 			a {
 				text-decoration: none;
-				border-bottom: 1px dotted;
-				border-color: blue;
+				border-bottom: 1px dotted blue;
 				color: blue;
 			}
+			a:focus {
+				outline: none;
+			}
 			a:visited {
-				border-bottom: 1px dotted;
-				border-color: purple;
+				border-bottom-color: purple;
 				color: purple;
 			}
-			a:hover {
-				border-bottom: 1px solid;
+			a:hover, a:visited:hover {
+				border-bottom-style: solid;
 			}
-			a:active {
-				border-bottom: 1px solid;
-				border-color: red;
+			a:active, a:visited:active {
+				border-bottom-color: red;
+				border-bottom-style: solid;
 				color: red;
 			}
 
@@ -275,10 +276,9 @@
 					display: none;
 				}
 
-				a, a:active, a:focus, a:hover, a:visited {
+				a, a:focus, a:hover, a:visited, a:active {
 					color: black;
-					outline: none;
-					text-decoration: none;
+					border-bottom-color: transparent;
 				}
 			}
 		</style>
